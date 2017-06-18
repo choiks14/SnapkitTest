@@ -10,91 +10,96 @@ import UIKit
 import SnapKit
 
 class MainController: UIViewController {
-    let cellName = "cell"
-    var didSetupConstraints = false
+  let cellName = "cell"
+  var didSetupConstraints = false
 
-    let menuList: [String] = ["1.View 가운데", "2.View 4등분", "3.Body,Footer 나누기","4-1.TopLayoutGuide 없이","4-2.TopLayoutGuide 추가"]
+  let menuList: [String] = ["1.View 가운데",
+    "2.View 4등분",
+    "3.Body,Footer 나누기",
+    "4-1.TopLayoutGuide 없이",
+    "4-2.TopLayoutGuide 추가"]
 
-    let tableView: UITableView = {
-        let tableView = UITableView()
-        return tableView
-    }()
+  let tableView: UITableView = {
+    let tableView = UITableView()
+    return tableView
+  }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-        self.initUI()
+    self.initUI()
 
-        self.initTableView()
-    }
+    self.initTableView()
+  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    func goViewController(vc: UIViewController) {
-
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
 }
 
 extension MainController: UITableViewDelegate, UITableViewDataSource {
+  func goViewController(vc: UIViewController) {
+    self.navigationController?.pushViewController(vc, animated: true)
+  }
 
-    public func initTableView() {
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
-        self.tableView.rowHeight = 44
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.cellName)
+  public func initTableView() {
+    self.tableView.dataSource = self
+    self.tableView.delegate = self
+    self.tableView.rowHeight = 44
+    self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.cellName)
+  }
+
+  public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)
+      -> Int {
+    return menuList.count
+  }
+
+  public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
+      -> UITableViewCell {
+    let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellName)!
+    cell.textLabel?.text = self.menuList[indexPath.row]
+
+    return cell
+  }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+
+    var vc: UIViewController?
+    if (indexPath.row == 0) {
+      vc = View1Controller.instance()
+    } else if (indexPath.row == 1) {
+      vc = View2Controller.instance()
+    } else if (indexPath.row == 2) {
+      vc = View3Controller.instance()
+    } else if (indexPath.row == 3) {
+      vc = View4Controller.instance()
+    } else if (indexPath.row == 4) {
+      vc = View5Controller.instance()
     }
-
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuList.count
+    if let _vc = vc {
+      _vc.title = self.menuList[indexPath.row]
+      self.goViewController(vc: _vc)
     }
-
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellName)!
-        cell.textLabel?.text = self.menuList[indexPath.row]
-
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-
-        var vc:UIViewController?
-        if (indexPath.row == 0) {
-            vc = View1Controller.instance()
-        } else if (indexPath.row == 1) {
-            vc = View2Controller.instance()
-        } else if (indexPath.row == 2) {
-            vc = View3Controller.instance()
-        }else if (indexPath.row == 3) {
-            vc = View4Controller.instance()
-        }else if (indexPath.row == 4) {
-            vc = View5Controller.instance()
-        }
-        if let _vc = vc{
-            _vc.title = self.menuList[indexPath.row]
-            self.goViewController(vc: _vc)
-        }
-    }
+  }
 }
 
 //snapkit
+
 extension MainController {
-    func initUI() {
-        self.view.addSubview(self.tableView)
-        view.setNeedsUpdateConstraints()
+  func initUI() {
+    self.view.addSubview(self.tableView)
+    view.setNeedsUpdateConstraints()
+  }
+
+  override func updateViewConstraints() {
+    if (!didSetupConstraints) {
+      tableView.snp.makeConstraints { make in
+        make.edges.equalToSuperview()
+      }
+      didSetupConstraints = true
     }
 
-    override func updateViewConstraints() {
-        if (!didSetupConstraints) {
-            tableView.snp.makeConstraints { make in
-                make.edges.equalToSuperview()
-            }
-            didSetupConstraints = true
-        }
-
-        super.updateViewConstraints()
-    }
+    super.updateViewConstraints()
+  }
 }

@@ -11,65 +11,66 @@ import UIKit
 
 
 class View5Controller: UIViewController {
-    var didSetupConstraints = false
+  var didSetupConstraints = false
 
-    let redView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.red
-        return view
-    }()
-
-
-    let contentView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.white
-        return view
-    }()
+  let redView: UIView = {
+    let view = UIView()
+    view.backgroundColor = UIColor.red
+    return view
+  }()
 
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  let contentView: UIView = {
+    let view = UIView()
+    view.backgroundColor = UIColor.white
+    return view
+  }()
 
-        self.initUI()
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-    static func instance()->View5Controller{
-        let vc = View5Controller()
-        return vc
-    }
+    self.initUI()
+  }
+
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
+
+  static func instance() -> View5Controller {
+    let vc = View5Controller()
+    return vc
+  }
 }
 
 //snapkit
+
 extension View5Controller {
 
-    func initUI() {
-        self.view.backgroundColor = .white
-        self.view.addSubview(self.contentView)
-        self.contentView.addSubview(self.redView)
+  func initUI() {
+    self.view.backgroundColor = .white
+    self.view.addSubview(self.contentView)
+    self.contentView.addSubview(self.redView)
 
-        view.setNeedsUpdateConstraints()
+    view.setNeedsUpdateConstraints()
+  }
+
+  override func updateViewConstraints() {
+    if (!didSetupConstraints) {
+
+      self.contentView.snp.makeConstraints { make in
+        make.top.equalTo(self.topLayoutGuide.snp.bottom)
+        make.bottom.left.right.equalToSuperview()
+      }
+
+      self.redView.snp.makeConstraints { make in
+        make.edges.equalToSuperview()
+      }
+
+      didSetupConstraints = true
     }
 
-    override func updateViewConstraints() {
-        if (!didSetupConstraints) {
+    super.updateViewConstraints()
 
-            self.contentView.snp.makeConstraints { make in
-                make.top.equalTo(self.topLayoutGuide.snp.bottom)
-                make.bottom.left.right.equalToSuperview()
-            }
-
-            self.redView.snp.makeConstraints { make in
-                make.edges.equalToSuperview()
-            }
-
-            didSetupConstraints = true
-        }
-
-        super.updateViewConstraints()
-
-    }
+  }
 }

@@ -12,103 +12,104 @@ import UIKit
 
 
 class View2Controller: UIViewController {
-    var didSetupConstraints = false
+  var didSetupConstraints = false
 
-    let redView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.red
-        return view
-    }()
+  let redView: UIView = {
+    let view = UIView()
+    view.backgroundColor = UIColor.red
+    return view
+  }()
 
-    let blueView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.blue
-        return view
-    }()
+  let blueView: UIView = {
+    let view = UIView()
+    view.backgroundColor = UIColor.blue
+    return view
+  }()
 
-    let greenView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.green
-        return view
-    }()
+  let greenView: UIView = {
+    let view = UIView()
+    view.backgroundColor = UIColor.green
+    return view
+  }()
 
-    let blackView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.black
-        return view
-    }()
+  let blackView: UIView = {
+    let view = UIView()
+    view.backgroundColor = UIColor.black
+    return view
+  }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-        self.initUI()
-    }
+    self.initUI()
+  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
 
-    static func instance() -> View2Controller {
-        let vc = View2Controller()
-        return vc
-    }
+  static func instance() -> View2Controller {
+    let vc = View2Controller()
+    return vc
+  }
 }
 
 //snapkit
+
 extension View2Controller {
-    func initUI() {
-        self.view.backgroundColor = .white
+  func initUI() {
+    self.view.backgroundColor = .white
 
-        self.view.addSubview(self.redView)
-        self.view.addSubview(self.greenView)
-        self.view.addSubview(self.blackView)
-        self.view.addSubview(self.blueView)
+    self.view.addSubview(self.redView)
+    self.view.addSubview(self.greenView)
+    self.view.addSubview(self.blackView)
+    self.view.addSubview(self.blueView)
 
-        view.setNeedsUpdateConstraints()
+    view.setNeedsUpdateConstraints()
+  }
+
+  override func updateViewConstraints() {
+    if (!didSetupConstraints) {
+      /*
+          red   | blue
+          green | black
+      */
+      redView.snp.makeConstraints { (make) in
+        let multipler = 1.0 / 2.0
+        make.width.equalTo(self.view).multipliedBy(multipler)
+        make.height.equalTo(self.view).multipliedBy(multipler)
+        make.top.equalTo(self.view)
+        make.left.equalTo(self.view)
+      }
+
+      blueView.snp.makeConstraints { (make) in
+        let multipler = 1.0 / 2.0
+        make.width.equalTo(self.view).multipliedBy(multipler)
+        make.height.equalTo(self.view).multipliedBy(multipler)
+        make.top.equalTo(self.view)
+        make.right.equalTo(self.view)
+      }
+
+      greenView.snp.makeConstraints { (make) in
+        let multipler = 1.0 / 2.0
+        make.width.equalTo(self.view).multipliedBy(multipler)
+        make.height.equalTo(self.view).multipliedBy(multipler)
+        make.bottom.equalTo(self.view)
+        make.right.equalTo(self.view)
+      }
+
+      blackView.snp.makeConstraints { (make) in
+        let multipler = 1.0 / 2.0
+        make.width.equalTo(self.view).multipliedBy(multipler)
+        make.height.equalTo(self.view).multipliedBy(multipler)
+        make.bottom.equalTo(self.view)
+        make.left.equalTo(self.view)
+      }
+
+      didSetupConstraints = true
     }
 
-    override func updateViewConstraints() {
-        if (!didSetupConstraints) {
-            /*
-                green   | blue
-                red     | black
-            */
-            redView.snp.makeConstraints { (make) in
-                let multipler = 1.0 / 2.0
-                make.width.equalTo(self.view).multipliedBy(multipler)
-                make.height.equalTo(self.view).multipliedBy(multipler)
-                make.top.equalTo(self.view)
-                make.left.equalTo(self.view)
-            }
+    super.updateViewConstraints()
 
-            blueView.snp.makeConstraints { (make) in
-                let multipler = 1.0 / 2.0
-                make.width.equalTo(self.view).multipliedBy(multipler)
-                make.height.equalTo(self.view).multipliedBy(multipler)
-                make.top.equalTo(self.view)
-                make.right.equalTo(self.view)
-            }
-
-            greenView.snp.makeConstraints { (make) in
-                let multipler = 1.0 / 2.0
-                make.width.equalTo(self.view).multipliedBy(multipler)
-                make.height.equalTo(self.view).multipliedBy(multipler)
-                make.bottom.equalTo(self.view)
-                make.right.equalTo(self.view)
-            }
-
-            blackView.snp.makeConstraints { (make) in
-                let multipler = 1.0 / 2.0
-                make.width.equalTo(self.view).multipliedBy(multipler)
-                make.height.equalTo(self.view).multipliedBy(multipler)
-                make.bottom.equalTo(self.view)
-                make.left.equalTo(self.view)
-            }
-
-            didSetupConstraints = true
-        }
-
-        super.updateViewConstraints()
-
-    }
+  }
 }

@@ -11,51 +11,52 @@ import UIKit
 
 
 class View4Controller: UIViewController {
-    var didSetupConstraints = false
+  var didSetupConstraints = false
 
-    let redView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.red
-        return view
-    }()
+  let redView: UIView = {
+    let view = UIView()
+    view.backgroundColor = UIColor.red
+    return view
+  }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-        self.initUI()
-    }
+    self.initUI()
+  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
 
-    static func instance()->View4Controller{
-        let vc = View4Controller()
-        return vc
-    }
+  static func instance() -> View4Controller {
+    let vc = View4Controller()
+    return vc
+  }
 }
 
 
 //snapkit
+
 extension View4Controller {
 
-    func initUI() {
-        self.view.backgroundColor = .white
-        self.view.addSubview(self.redView)
-        view.setNeedsUpdateConstraints()
+  func initUI() {
+    self.view.backgroundColor = .white
+    self.view.addSubview(self.redView)
+    view.setNeedsUpdateConstraints()
+  }
+
+  override func updateViewConstraints() {
+    if (!didSetupConstraints) {
+      //tableView
+      redView.snp.makeConstraints { make in
+        make.edges.equalToSuperview()
+      }
+
+      didSetupConstraints = true
     }
 
-    override func updateViewConstraints() {
-        if (!didSetupConstraints) {
-            //tableView
-            redView.snp.makeConstraints { make in
-                make.edges.equalToSuperview()
-            }
+    super.updateViewConstraints()
 
-            didSetupConstraints = true
-        }
-
-        super.updateViewConstraints()
-
-    }
+  }
 }

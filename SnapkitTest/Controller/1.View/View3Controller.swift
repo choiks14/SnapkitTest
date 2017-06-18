@@ -66,7 +66,7 @@ extension View3Controller {
             }
 
             footerView.snp.makeConstraints { (make) in
-                make.height.equalTo(100)
+               // make.height.equalTo(100)
                 make.top.equalTo(self.bodyView.snp.bottom)
                 make.bottom.left.right.equalTo(self.view)
             }
