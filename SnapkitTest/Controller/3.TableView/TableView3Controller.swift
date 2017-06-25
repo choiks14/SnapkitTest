@@ -12,7 +12,7 @@ class TableView3Controller: UIViewController {
 
   var didSetupConstraints = false
 
-  let cellName = "tableview2cell"
+  let cellName = "tableview3cell"
 
   let tableView: UITableView = {
     let tableView = UITableView()
