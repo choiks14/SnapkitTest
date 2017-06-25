@@ -53,7 +53,6 @@ extension TableView3Controller: UITableViewDelegate, UITableViewDataSource {
   public func initTableView() {
     self.tableView.dataSource = self
     self.tableView.delegate = self
-    self.tableView.backgroundColor = .gray
     self.tableView.separatorStyle = .none
     self.tableView.estimatedRowHeight = 212.0
     self.tableView.rowHeight = UITableViewAutomaticDimension

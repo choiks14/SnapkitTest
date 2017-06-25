@@ -57,7 +57,6 @@ extension TableView1Cell {
     self.addSubview(self.userDesc)
 
 
-    //设置布局 SnapKit  --- >相当去Objective-C中的Masonry
     userImage.snp.makeConstraints({ (make) in
       make.top.left.equalTo(10)
       make.width.height.equalTo(40)

@@ -81,7 +81,6 @@ extension TableView3Cell {
     self.addSubview(self.imageUrl)
     self.addSubview(self.userView)
 
-
     self.userView.backgroundColor = UIColor.white
     self.userView.addSubview(self.userName)
     self.userView.addSubview(self.userImage)
@@ -117,7 +116,7 @@ extension TableView3Cell {
       make.width.height.equalTo(40)
     })
 
-    //username:24
+    //username
     userName.snp.makeConstraints { (make) in
       make.top.equalTo(5)
       make.left.equalTo(userImage.snp.right).offset(10)
@@ -125,7 +124,7 @@ extension TableView3Cell {
       make.height.equalTo(19)
     }
 
-    //date:28
+    //date
     date.snp.makeConstraints { (make) in
       make.top.equalTo(userName.snp.bottom).offset(5)
       make.left.equalTo(userImage.snp.right).offset(10)
