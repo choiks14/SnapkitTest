@@ -13,11 +13,13 @@
 		C9173403012E8DFBE7F31C4B /* View1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173C9DB5BB89064F287942 /* View1Controller.swift */; };
 		C917355EA70B3409208AC840 /* TableView1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91734EF247801856D521355 /* TableView1Controller.swift */; };
 		C91735A491344C3AEE29F335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9173B4F3C0A23E897089492 /* Assets.xcassets */; };
+		C9173653D01C5DAEB87639B0 /* Stack3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91731189CDA63DE65175E6A /* Stack3ViewController.swift */; };
 		C9173685149F726ECFA89672 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91734765304CC089D2E2972 /* MainController.swift */; };
 		C91736CAD9C48C567503A926 /* Stack1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173094316C2F4E1110A8F8 /* Stack1ViewController.swift */; };
 		C9173761CE6D3F2ECD41FE3E /* TableView1Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91735EC28C6BEEAF5E43836 /* TableView1Model.swift */; };
 		C917379F414589C3C9AE714C /* View5Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173A9F118BD2DBCBAD7BE5 /* View5Controller.swift */; };
 		C91738542BDA48D36DC61833 /* TableView3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91735FC25FA8B291752F315 /* TableView3Controller.swift */; };
+		C917385EE95C0A337379FEF3 /* Stack2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C917367CC2A14FCFD61FD728 /* Stack2ViewController.swift */; };
 		C917393C7A71993343411395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91732118674F01AB261E66A /* LaunchScreen.storyboard */; };
 		C917394A7CD93AF70555AE75 /* TableView3Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173477D7088B07408EFA6C /* TableView3Model.swift */; };
 		C9173A796FFCA5F2846DE953 /* TableView1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173D31C85CF47F3383F5B5 /* TableView1Cell.swift */; };
@@ -36,6 +38,7 @@
 		839B1B0488178720853F01C9 /* Pods-SnapkitTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapkitTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapkitTest/Pods-SnapkitTest.release.xcconfig"; sourceTree = "<group>"; };
 		B71C49E46FDDF3595F061895 /* Pods-SnapkitTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapkitTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapkitTest/Pods-SnapkitTest.debug.xcconfig"; sourceTree = "<group>"; };
 		C9173094316C2F4E1110A8F8 /* Stack1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack1ViewController.swift; sourceTree = "<group>"; };
+		C91731189CDA63DE65175E6A /* Stack3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack3ViewController.swift; sourceTree = "<group>"; };
 		C91731A714387948EA9FA70E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C91732D3B09E98C85953C14B /* TableView3Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView3Cell.swift; sourceTree = "<group>"; };
 		C91733CA258721AE9ABA93F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		C91735EC28C6BEEAF5E43836 /* TableView1Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView1Model.swift; sourceTree = "<group>"; };
 		C91735FC25FA8B291752F315 /* TableView3Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView3Controller.swift; sourceTree = "<group>"; };
 		C917362FDDE214B1370F19B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C917367CC2A14FCFD61FD728 /* Stack2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack2ViewController.swift; sourceTree = "<group>"; };
 		C91738A9A621B322419E15C8 /* View3Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View3Controller.swift; sourceTree = "<group>"; };
 		C917396EE68083E9B8E787A4 /* SnapkitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapkitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91739F832102FF33E83A1A1 /* TableView2Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView2Model.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				C9173094316C2F4E1110A8F8 /* Stack1ViewController.swift */,
+				C917367CC2A14FCFD61FD728 /* Stack2ViewController.swift */,
+				C91731189CDA63DE65175E6A /* Stack3ViewController.swift */,
 			);
 			path = 2.StackView;
 			sourceTree = "<group>";
@@ -314,6 +320,8 @@
 				C9173B5F2B7AE2D7C6F05343 /* TableView3Cell.swift in Sources */,
 				C917394A7CD93AF70555AE75 /* TableView3Model.swift in Sources */,
 				C91738542BDA48D36DC61833 /* TableView3Controller.swift in Sources */,
+				C917385EE95C0A337379FEF3 /* Stack2ViewController.swift in Sources */,
+				C9173653D01C5DAEB87639B0 /* Stack3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

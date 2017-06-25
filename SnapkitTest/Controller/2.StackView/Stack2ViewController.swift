@@ -11,16 +11,15 @@ import UIKit
 import SnapKit
 
 
-class Stack1ViewController: UIViewController {
+class Stack2ViewController: UIViewController {
   var didSetupConstraints = false
-
 
   let stackView1:UIStackView = {
     let stack = UIStackView()
-    stack.axis = .vertical
+    stack.axis = .horizontal
     stack.spacing = 10
     stack.translatesAutoresizingMaskIntoConstraints = false;
-    stack.backgroundColor = .red
+    stack.backgroundColor = .white
     stack.alignment = .fill
     stack.distribution = .fillEqually
     return stack
@@ -49,15 +48,15 @@ class Stack1ViewController: UIViewController {
     super.didReceiveMemoryWarning()
   }
 
-  static func instance() -> Stack1ViewController {
-    let vc = Stack1ViewController()
+  static func instance() -> Stack2ViewController {
+    let vc = Stack2ViewController()
     return vc
   }
 }
 
 
 //snapkit
-extension Stack1ViewController {
+extension Stack2ViewController {
   func initUI() {
     self.view.backgroundColor = .white
 

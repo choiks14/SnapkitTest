@@ -18,7 +18,9 @@ class MainController: UIViewController {
     "3.Body,Footer 나누기",
     "4-1.TopLayoutGuide 없이",
     "4-2.TopLayoutGuide 추가",
-    "5.StackView",
+    "1.StackView(세로)",
+    "2.StackView(가로)",
+    "3.StackView(복합)",
     "1.기본테이블",
     "2.동적 높이",
     "3.이미지"]
@@ -86,12 +88,16 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
     } else if (indexPath.row == 4) {
       vc = View5Controller.instance()
     } else if (indexPath.row == 5) {
-      vc = Stack1Controller.instance()
+      vc = Stack1ViewController.instance()
     }else if (indexPath.row == 6) {
-      vc = TableView2Controller.instance()
+      vc = Stack2ViewController.instance()
     }else if (indexPath.row == 7) {
-      vc = TableView1Controller.instance()
+      vc = Stack3ViewController.instance()
     }else if (indexPath.row == 8) {
+      vc = TableView2Controller.instance()
+    }else if (indexPath.row == 9) {
+      vc = TableView1Controller.instance()
+    }else if (indexPath.row == 10) {
       vc = TableView3Controller.instance()
     }
     if let _vc = vc {
