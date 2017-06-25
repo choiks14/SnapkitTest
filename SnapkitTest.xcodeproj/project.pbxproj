@@ -11,12 +11,22 @@
 		C91733864E7D4D0A8A6A960D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C917362FDDE214B1370F19B8 /* AppDelegate.swift */; };
 		C91733E53E4B1D8B530E3774 /* View3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91738A9A621B322419E15C8 /* View3Controller.swift */; };
 		C9173403012E8DFBE7F31C4B /* View1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173C9DB5BB89064F287942 /* View1Controller.swift */; };
+		C917355EA70B3409208AC840 /* TableView1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91734EF247801856D521355 /* TableView1Controller.swift */; };
 		C91735A491344C3AEE29F335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9173B4F3C0A23E897089492 /* Assets.xcassets */; };
 		C9173685149F726ECFA89672 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91734765304CC089D2E2972 /* MainController.swift */; };
+		C91736CAD9C48C567503A926 /* Stack1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173094316C2F4E1110A8F8 /* Stack1ViewController.swift */; };
+		C9173761CE6D3F2ECD41FE3E /* TableView1Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91735EC28C6BEEAF5E43836 /* TableView1Model.swift */; };
 		C917379F414589C3C9AE714C /* View5Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173A9F118BD2DBCBAD7BE5 /* View5Controller.swift */; };
+		C91738542BDA48D36DC61833 /* TableView3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91735FC25FA8B291752F315 /* TableView3Controller.swift */; };
 		C917393C7A71993343411395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91732118674F01AB261E66A /* LaunchScreen.storyboard */; };
+		C917394A7CD93AF70555AE75 /* TableView3Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173477D7088B07408EFA6C /* TableView3Model.swift */; };
+		C9173A796FFCA5F2846DE953 /* TableView1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173D31C85CF47F3383F5B5 /* TableView1Cell.swift */; };
 		C9173B176ABB524E81846A0C /* View2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173CCA0A72A27217C7C4E2 /* View2Controller.swift */; };
+		C9173B2A675CD74BC15E95D0 /* TableView2Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91739F832102FF33E83A1A1 /* TableView2Model.swift */; };
+		C9173B5F2B7AE2D7C6F05343 /* TableView3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91732D3B09E98C85953C14B /* TableView3Cell.swift */; };
+		C9173B95075931925F4EC1E9 /* TableView2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173F10EE7F9BD8A5DFF6D6 /* TableView2Cell.swift */; };
 		C9173BADE0466CE5AF1C557A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C917386BEF5ECC0B735551AE /* Main.storyboard */; };
+		C9173DE18D43DB60D00C45B7 /* TableView2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173D998C1658E31FF118C7 /* TableView2Controller.swift */; };
 		C9173FC51A1FA8688B254E57 /* View4Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9173B159882238313BF9CB5 /* View4Controller.swift */; };
 		DBBD8AA4DCB1720F7F3B89AB /* Pods_SnapkitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 476BD0902B094EFBEAA393AC /* Pods_SnapkitTest.framework */; };
 /* End PBXBuildFile section */
@@ -25,18 +35,28 @@
 		476BD0902B094EFBEAA393AC /* Pods_SnapkitTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapkitTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		839B1B0488178720853F01C9 /* Pods-SnapkitTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapkitTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapkitTest/Pods-SnapkitTest.release.xcconfig"; sourceTree = "<group>"; };
 		B71C49E46FDDF3595F061895 /* Pods-SnapkitTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapkitTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapkitTest/Pods-SnapkitTest.debug.xcconfig"; sourceTree = "<group>"; };
+		C9173094316C2F4E1110A8F8 /* Stack1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack1ViewController.swift; sourceTree = "<group>"; };
 		C91731A714387948EA9FA70E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C91732D3B09E98C85953C14B /* TableView3Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView3Cell.swift; sourceTree = "<group>"; };
 		C91733CA258721AE9ABA93F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		C91734765304CC089D2E2972 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		C9173477D7088B07408EFA6C /* TableView3Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView3Model.swift; sourceTree = "<group>"; };
+		C91734EF247801856D521355 /* TableView1Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView1Controller.swift; sourceTree = "<group>"; };
+		C91735EC28C6BEEAF5E43836 /* TableView1Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView1Model.swift; sourceTree = "<group>"; };
+		C91735FC25FA8B291752F315 /* TableView3Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView3Controller.swift; sourceTree = "<group>"; };
 		C917362FDDE214B1370F19B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C91738A9A621B322419E15C8 /* View3Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View3Controller.swift; sourceTree = "<group>"; };
 		C917396EE68083E9B8E787A4 /* SnapkitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapkitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91739F832102FF33E83A1A1 /* TableView2Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView2Model.swift; sourceTree = "<group>"; };
 		C9173A9F118BD2DBCBAD7BE5 /* View5Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View5Controller.swift; sourceTree = "<group>"; };
 		C9173B159882238313BF9CB5 /* View4Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View4Controller.swift; sourceTree = "<group>"; };
 		C9173B4F3C0A23E897089492 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9173C9DB5BB89064F287942 /* View1Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View1Controller.swift; sourceTree = "<group>"; };
 		C9173CCA0A72A27217C7C4E2 /* View2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View2Controller.swift; sourceTree = "<group>"; };
+		C9173D31C85CF47F3383F5B5 /* TableView1Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView1Cell.swift; sourceTree = "<group>"; };
+		C9173D998C1658E31FF118C7 /* TableView2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView2Controller.swift; sourceTree = "<group>"; };
 		C9173E152AF8743C2225B3C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9173F10EE7F9BD8A5DFF6D6 /* TableView2Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView2Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +88,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C917318820664EBCE3B55323 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C9173D31C85CF47F3383F5B5 /* TableView1Cell.swift */,
+				C9173F10EE7F9BD8A5DFF6D6 /* TableView2Cell.swift */,
+				C91732D3B09E98C85953C14B /* TableView3Cell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		C91734120B9757616C5FA81E /* SnapkitTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +121,14 @@
 			);
 			sourceTree = "<group>";
 		};
+		C9173860006197BF96F613EA /* 2.StackView */ = {
+			isa = PBXGroup;
+			children = (
+				C9173094316C2F4E1110A8F8 /* Stack1ViewController.swift */,
+			);
+			path = 2.StackView;
+			sourceTree = "<group>";
+		};
 		C917398E406062774A25D89B /* 1.View */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,13 +141,37 @@
 			path = 1.View;
 			sourceTree = "<group>";
 		};
+		C9173B3AB71945E31F8AE6DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C91735EC28C6BEEAF5E43836 /* TableView1Model.swift */,
+				C91739F832102FF33E83A1A1 /* TableView2Model.swift */,
+				C9173477D7088B07408EFA6C /* TableView3Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C9173B9540C620B866B9ABD6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				C91734765304CC089D2E2972 /* MainController.swift */,
 				C917398E406062774A25D89B /* 1.View */,
+				C9173860006197BF96F613EA /* 2.StackView */,
+				C9173E9ED3A33CBB273FAB13 /* 3.TableView */,
+				C9173B3AB71945E31F8AE6DF /* Model */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C9173E9ED3A33CBB273FAB13 /* 3.TableView */ = {
+			isa = PBXGroup;
+			children = (
+				C91734EF247801856D521355 /* TableView1Controller.swift */,
+				C9173D998C1658E31FF118C7 /* TableView2Controller.swift */,
+				C917318820664EBCE3B55323 /* Cell */,
+				C91735FC25FA8B291752F315 /* TableView3Controller.swift */,
+			);
+			path = 3.TableView;
 			sourceTree = "<group>";
 		};
 		E720ACF97EFDDF9381BF4ACC /* Frameworks */ = {
@@ -242,6 +304,16 @@
 				C91733E53E4B1D8B530E3774 /* View3Controller.swift in Sources */,
 				C9173FC51A1FA8688B254E57 /* View4Controller.swift in Sources */,
 				C917379F414589C3C9AE714C /* View5Controller.swift in Sources */,
+				C91736CAD9C48C567503A926 /* Stack1ViewController.swift in Sources */,
+				C917355EA70B3409208AC840 /* TableView1Controller.swift in Sources */,
+				C9173DE18D43DB60D00C45B7 /* TableView2Controller.swift in Sources */,
+				C9173A796FFCA5F2846DE953 /* TableView1Cell.swift in Sources */,
+				C9173761CE6D3F2ECD41FE3E /* TableView1Model.swift in Sources */,
+				C9173B2A675CD74BC15E95D0 /* TableView2Model.swift in Sources */,
+				C9173B95075931925F4EC1E9 /* TableView2Cell.swift in Sources */,
+				C9173B5F2B7AE2D7C6F05343 /* TableView3Cell.swift in Sources */,
+				C917394A7CD93AF70555AE75 /* TableView3Model.swift in Sources */,
+				C91738542BDA48D36DC61833 /* TableView3Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

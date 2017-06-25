@@ -17,10 +17,18 @@ class MainController: UIViewController {
     "2.View 4등분",
     "3.Body,Footer 나누기",
     "4-1.TopLayoutGuide 없이",
-    "4-2.TopLayoutGuide 추가"]
+    "4-2.TopLayoutGuide 추가",
+    "5.StackView",
+    "1.기본테이블",
+    "2.동적 높이",
+    "3.이미지"]
+
+
+
 
   let tableView: UITableView = {
     let tableView = UITableView()
+
     return tableView
   }()
 
@@ -51,7 +59,8 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
 
   public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)
       -> Int {
-    return menuList.count
+
+    return self.menuList.count
   }
 
   public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
@@ -76,6 +85,14 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
       vc = View4Controller.instance()
     } else if (indexPath.row == 4) {
       vc = View5Controller.instance()
+    } else if (indexPath.row == 5) {
+      vc = Stack1Controller.instance()
+    }else if (indexPath.row == 6) {
+      vc = TableView2Controller.instance()
+    }else if (indexPath.row == 7) {
+      vc = TableView1Controller.instance()
+    }else if (indexPath.row == 8) {
+      vc = TableView3Controller.instance()
     }
     if let _vc = vc {
       _vc.title = self.menuList[indexPath.row]
@@ -85,7 +102,6 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
 }
 
 //snapkit
-
 extension MainController {
   func initUI() {
     self.view.addSubview(self.tableView)
