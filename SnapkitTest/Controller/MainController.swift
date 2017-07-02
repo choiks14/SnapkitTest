@@ -21,9 +21,12 @@ class MainController: UIViewController {
     "1.StackView(세로)",
     "2.StackView(가로)",
     "3.StackView(복합)",
-    "1.기본테이블",
-    "2.동적 높이",
-    "3.이미지"]
+    "1.기본 tableview",
+    "2.동적 높이 tableview",
+    "3.이미지 tableview",
+    "1.이미지(가로) collection",
+    "2.이미지(세로) collection",
+    "3.카드(세로) collection"]
 
 
 
@@ -99,6 +102,12 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
       vc = TableView1Controller.instance()
     }else if (indexPath.row == 10) {
       vc = TableView3Controller.instance()
+    }else if (indexPath.row == 11) {
+      vc = Collection1ViewController.instance()
+    } else if (indexPath.row == 12) {
+      vc = Collection2ViewController.instance()
+    }else if (indexPath.row == 13) {
+      vc = Collection3ViewController.instance()
     }
     if let _vc = vc {
       _vc.title = self.menuList[indexPath.row]
